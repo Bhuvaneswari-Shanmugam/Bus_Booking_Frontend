@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {jwtDecode} from 'jwt-decode'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import logo from '../assets/logo.jpg';
 import profile from '../assets/profile.jpg';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -35,7 +37,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div className="container-fluid me-5">
-                <img src={logo} alt="Logo" width="90" height="60" className="d-inline-block align-text-top ms-3" />
+                <img src={logo} alt="Logo" width="80" height="60" className="d-inline-block align-text-top ms-3" />
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -62,14 +64,6 @@ const Navbar = () => {
                             <Link className="nav-link mx-3" to="/footer">Services</Link>
                         </li>
                     </ul>
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link mx-3" to="/">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link mx-3" to="/signup">Sign up</Link>
-                        </li>
-                    </ul>
                     <span className="dropdown-item-end py-2 px-2">{firstName}</span>
                     <div className="dropdown">
                         <button
@@ -84,7 +78,7 @@ const Navbar = () => {
                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                             <li>
                                 <Link className="dropdown-item" to={`/profile/${userId}`}>
-                                    {firstName}'s Profile
+                                     Profile
                                 </Link>
                             </li>
                             <li>

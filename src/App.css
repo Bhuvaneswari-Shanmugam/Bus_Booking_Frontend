@@ -2,6 +2,7 @@
 html, body {
   margin: 0;
   height: 100%;
+  width: 100%;
   overflow: hidden;
   padding-top: 0;
 }
@@ -127,7 +128,7 @@ html, body {
 
 
   position: absolute; 
-  top: 100px; 
+  top: 90px; 
   color: #f5f5f5;
   width: 500px;
   height: auto;
@@ -168,38 +169,6 @@ html, body {
   cursor: pointer;
 }
 
-
-
-
-/* Card Styles */
-/* App.css */
-/* .bus-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  margin-top: 0;
-}
-
-.card {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.card-summary {
-  margin-top: 20px;
-  text-align: left;
-  padding: 15px;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-} */
 
 
 /* Seat Styles */
@@ -256,19 +225,6 @@ html, body {
   align-items: center; 
 }
 
-/* Booking Summary Styles */
-/* 
-.book-summary {
-  padding: 15px;
-  margin-top: 100px;
-  border-radius: 5px; 
-  background-color: #f9f9f9; 
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;             
-  flex-direction: column;     
-  align-items: center;       
-  justify-content: center;   
-} */
 
 .summary-item {
   display: flex;
@@ -292,21 +248,6 @@ html, body {
 }
 
 
-/* Button Styles */
-/* .pay-button {
-  padding: 10px 20px;
-  background-color: #007bff; 
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; 
-} */
-
-/* .pay-button:hover {
-  background-color: #0056b3; 
-  transform: scale(1.05); 
-} */
 
 /* Navbar Styles */
 .navbar {
@@ -385,10 +326,6 @@ html, body {
   font-size: 14px;
 }
 
-/* .pay-button {
-  padding: 8px 16px;
-  font-size: 16px;
-} */
 
 
 @media (max-width: 576px) {
@@ -474,3 +411,36 @@ header {
 .hash-color {
   color: #123456; 
 }
+
+
+
+
+/* customerdetails */
+.customer-details {
+  margin-top: 30px;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+.table th {
+  font-size: 16px;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.table-responsive {
+  margin-top: 20px;
+}
+.admin-page-bgbus-container{
+  background-image: url('C:\Users\Admin\Desktop\bhuvana\react\BookingApplication\src\assets/a.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 95vh;
+  margin: 0px;
+  padding: 0px;
+}
+

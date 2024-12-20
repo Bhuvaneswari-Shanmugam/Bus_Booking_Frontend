@@ -1,23 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { getSignupValidationSchema } from '../utiles/SignupValidationSchema';
-import { useNavigate } from 'react-router-dom';
-import { useSignupMutation } from '../redux/service/SignupApi';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { useSignupMutation } from '../redux/service/SignupApi';
+import { getSignupValidationSchema } from '../utils/SignupValidationSchema';
+import '../App.css';
 import { FormFields } from '../constant/Index';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import Form from '../components/Form';
 import HomeBus from '../assets/homeBus.png';
-import '../App.css';
+
 
 const Signup = () => {
     const validationSchema = getSignupValidationSchema();
     const navigate = useNavigate();
-
     const [signup] = useSignupMutation();
 
     const {
@@ -30,6 +30,7 @@ const Signup = () => {
     });
 
     const onSubmit = async (data) => {
+        console.log("Form data submitted: ", data); 
         try {
             await signup(data).unwrap();
             toast.success("SignUp done Successfully", {
@@ -42,6 +43,7 @@ const Signup = () => {
             toast.error("Signup failed. Please try again.");
         }
     };
+    
 
     return (
         <div className="home-container">
@@ -49,7 +51,7 @@ const Signup = () => {
                 <img src={HomeBus} alt="Sign In" />
             </div>
 
-            <div className="customer-container d-flex justify-content-center align-items-center my-4">
+            <div className="customer-container d-flex justify-content-center align-items-center " style={{marginTop: '-50px'}}>
                 <ToastContainer />
                 <div className="card border-0 shadow-lg bg-light" style={{ margin:'0px'}}>
                     <div className="card-body flex-column justify-content-between">
@@ -105,13 +107,7 @@ const Signup = () => {
 
                         <p className="text-center mt-3">
                             Already have an account?{' '}
-                            <Button
-                                type="button"
-                                className="btn btn-link p-0"
-                                onClick={() => navigate('/')}
-                            >
-                                Sign In
-                            </Button>
+                           <Link to="/" >Sign In</Link>
                         </p>
                     </div>
                 </div>

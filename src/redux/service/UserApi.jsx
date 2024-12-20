@@ -17,7 +17,7 @@ export const UsersApi = createApi({
   endpoints: (builder) => ({
     getUserById: builder.query({
       query: (id) => ({
-        url: `get-user-detail/${id}`,
+        url: `retrieve-user-detail/${id}`,
         method: 'GET',
       }),
     }),
@@ -25,7 +25,7 @@ export const UsersApi = createApi({
 
     getAllUsers: builder.query({
       query: () => ({
-        url: 'get-all-users',
+        url: 'retrieve-all-user',
         method: 'GET',
       }),
     }),

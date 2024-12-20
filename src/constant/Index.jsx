@@ -58,13 +58,13 @@ export const FormFields = [
 
 
 export const acBuses = [
-  { id: 1, imgSrc: AC, price: 700, type: 'AC' },
-  { id: 2, imgSrc: AC, price: 700, type: 'AC' },
+  { id: 3, imgSrc: AC, price: 700, type: 'AC' },
+  { id: 4, imgSrc: AC, price: 700, type: 'AC' },
 ];
 
 export const nonAcBuses = [
-  { id: 3, imgSrc: bus, price: 520, type: 'NON-AC' },
-  { id: 4, imgSrc: bus, price: 520, type: 'NON-AC' },
+  { id: 1, imgSrc: bus, price: 520, type: 'NON-AC' },
+  { id: 2, imgSrc: bus, price: 520, type: 'NON-AC' },
 ];
 
 export const sleeperBuses = [

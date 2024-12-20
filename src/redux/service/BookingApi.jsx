@@ -16,7 +16,7 @@ export const BookingApi = createApi({
 
     createBooking: builder.mutation({
       query: ({ pickupPoint, destinationPoint, pickupTime, busNumber, busType, bookedNoOfSeats, perSeatAmount, totalAmount }) => ({
-        url: '/create',
+        url: '/create-booking',
         method: 'POST',
         params: {
           pickupPoint,
@@ -33,7 +33,7 @@ export const BookingApi = createApi({
 
     deleteBooking: builder.mutation({
       query: ({ busNumber, seatNumbers }) => ({
-        url: '/delete',
+        url: '/delete-booking',
         method: 'DELETE',
         params: {
           busNumber,
@@ -44,7 +44,7 @@ export const BookingApi = createApi({
 
     getAllBookings: builder.query({
       query: () => ({
-        url: '/fetch-all-booking-by-userId',
+        url: '/retrieve-all-booking-by-userId',
         method: 'GET',
       }),
     }),
@@ -68,7 +68,7 @@ export const BookingApi = createApi({
 
     getAvailableBuses: builder.query({
       query: (busId) => ({
-        url: `/available-buses`,  
+        url: `/available-seat`,  
         method: 'GET',
         params:{busId}
       }),
